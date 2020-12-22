@@ -39,7 +39,7 @@ li a {
     font-weight:normal;
     transition-duration: 500ms;
 }
-li a:hover:not(:active) {
+li a:hover {
     color: white;
     
 }
