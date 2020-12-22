@@ -1,6 +1,5 @@
 const {Router} = require('express');
-const { renderString } = require('nunjucks');
-const User = require('../MongoDB/user.model');
+const {models:{User}} = require('../MongoDB/index');
 
 const router = Router();
 

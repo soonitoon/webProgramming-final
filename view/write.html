@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block styles %}
+<link rel="stylesheet" href="/public/css/write.css">
+{% endblock %}
+{% block content %}
+<div class="dummy"></div>
+<div class="grid-container">
+    <div class="form-container">
+        <h1 class="title">게시물 작성하기.</h1>
+        <form action="/write" class="write-form" method="POST">
+            <div class="row-container">
+                <input type="text" id="nickname" name="nickname" placeholder="닉네임">
+                <p>게시판에 올라갈 닉네임을 만들어주세요.</p><br>
+                <p>ex.홍길동</p>
+            </div>
+            <div class="row-container">
+                <input type="text" id="title" name="title" placeholder="제목">
+                <p>게시물의 제목을 작성해주세요.</p><br>
+                <p>ex.밤 세서 과제하는 날.</p>
+            </div>
+            <div class="row-container">
+                <textarea style="resize: none" name="text" id="text" placeholder="본문"></textarea>
+                <p>허위 정보, 욕설, 비방 등은 통보 없이 삭제될 수 있습니다.</p>
+            </div>
+            <div class="error" id="error-message">{{errorMessage}}</div>
+            <button type="submit">업로드</button>
+    </form>
+    </div>
+    <h1 class="send">Send To ></h1>
+    <img src="http://www.bluemed-initiative.eu/wp-content/uploads/2016/12/Logo-5.png" alt="">
+</div>
+{% endblock %}
+{% block script %}
+<script src="/public/js/write.js"></script>
+{% endblock %}

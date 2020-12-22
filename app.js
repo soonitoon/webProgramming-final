@@ -7,6 +7,8 @@ const cookieParser = require('cookie-parser');
 const {IS_DEV, COOKIE_SECRET} = require('./env/index');
 const pageRouter = require('./routes/page.router');
 const authRouter = require('./routes/auth.router');
+const writeRouter = require('./routes/write.router');
+const boardRouter = require('./routes/board.router');
 const session = require('express-session');
 const {connect, mongoose} = require('./MongoDB/index');
 const MongoStore = require('connect-mongo')(session);
@@ -43,6 +45,8 @@ app.use(authenticated);
 
 app.use(pageRouter);
 app.use(authRouter);
+app.use(writeRouter);
+app.use(boardRouter);
 
 app.use((req, res, next) => {
     next(createError(404));

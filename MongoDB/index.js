@@ -21,6 +21,7 @@ connection.on('disconnected', () => {
 
 const models = {};
 models.User = require('./user.model');
+models.Text = require('./text.model');
 
 module.exports = {
     connect,

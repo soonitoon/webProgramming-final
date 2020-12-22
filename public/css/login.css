@@ -1,31 +1,11 @@
-.header h1 {
-    margin: 70px 0 15px 100px;
+
+.login-container {
+    margin: 120px auto 50px 120px;
+    text-align: left;
 }
-.header img {
-    width: 100%;
-    height: 200px;
-}
-.header {
-    display: absolute;
-}
-.inner-h1 {
-    position: relative;
-    z-index: 1;
-    color: white;
-    top: -180px;
-    left: 550px;
-}
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
-    margin: 20px auto;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h1 {
+    font-size: 38px;
+    margin-bottom: 40px;
 }
 input {
     padding: 10px;
@@ -60,19 +40,34 @@ button:focus {
 button:hover {
     background-color: rgba(15, 131, 255, 1);
 }
-.main-container p {
-    margin: 10px 0;
+.column-container {
+    display: flex;
+    flex-direction: column;
+}
+.login-container p {
+    margin: 15px 0;
     color: rgba(89, 89, 89, 1);
     font-weight: 600;
-    font-size: 19px;
+    font-size: 14px;
 }
-.main-container a {
+.error {
+    color: red;
+}
+.column-container a {
     text-decoration: none;
     margin: 7px 0;
     color: rgba(71, 117, 255, 1);
     font-weight: 600;
-    font-size: 19px;
+    font-size: 17px;
 }
-.error {
-    color: red;
+hr {
+}
+.end-p {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 30px 0 30px 120px;
+}
+.end-p a {
+    text-decoration: none;
+    color: rgba(71, 117, 255, 1);
 }

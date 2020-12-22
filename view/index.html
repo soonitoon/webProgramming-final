@@ -1,6 +1,52 @@
 {% extends 'layout.html' %}
 
+{% block styles %}
+<link rel="stylesheet" href="/public/css/index.css">
+{% endblock %}
+
 {% block content %}
-<h1>Index Page</h1>
-<div>Cookie: {{cookie}}</div>
+<div class="dumy"></div>
+<div class="p-container">
+    <a href="/board">온라인 무료 게시판</a>
+    <p>에서 사람들과 대화하세요.</p>
+</div>
+<div class="column-container">
+    <img src="http://www.bluemed-initiative.eu/wp-content/uploads/2016/12/Logo-5.png" alt="">
+    <h1>CB&U</h1>
+    <h1>역사상 가장 강력한 게시판.</h1>
+    <a href="/board">게시물 보기</a>
+</div>
+<div class="column-container">
+    <h1>게시물을 위한 완벽한 시스템.</h1>
+    <p>동시공유 기능은 ￦950,000부터</p>
+    <div class="atag-container">
+        <a href="/">더 알아보기</a>
+        <a href="/">구입하기</a>
+    </div>
+    <div class="row-container img-row-container">
+        <div class="img-container">
+            <img src="https://www.pinclipart.com/picdir/big/51-511102_design-free-logo-srj-hd-logo-png-clipart.png" alt="">
+            <p>언제 어디서든 강력한 필기. 종이와 연필 없이도 아이디어를 마음껏 표현할 수 있습니다. 모든 내용은 비밀이 보장되며, CB&U는 당신의 아이디어를 보호합니다.</p>
+        </div>
+        <div class="img-container">
+            <img src="https://realm.io/assets/svg/icons/sync/sync.png" alt="">
+            <p>CB&U는 완벽한 협동 플레이를 지원합니다. 당신의 전화번호만 있다면 언제 어디서나 프로젝트의 동료들이 당신의 아이디어를 멋대로 추측하고, 수정을 요구할 수 있습니다. </p>
+        </div>
+        <div class="img-container">
+            <img src="https://png2.cleanpng.com/sh/5163b7caa8b389909f7358945b8b9a16/L0KzQYm3V8AzN6lsfpH0aYP2gLBuTf1wdph0fNQ2ZHH3cbPokBUudpD4id42cHB2hLj5hgNydF5yh9Dwbz24coSChslmO2dnSao6ND6zQ4W7V8MyOWI6S6IAMka0R4q7U8g4NqFzf3==/kisspng-mongodb-database-nosql-postgresql-mongo-5b39f9e36b1814.0344731115305261794387.png" alt="">
+            <p>CB&U는 강력한 mongoDB를 사용하는 게시판입니다. 당신의 아이디어는 체계화된 데이터베이스 속에 보관되고, 영원히 꺼내올 수 없습니다. 기억력 개선에도 좋지요.</p>
+        </div>
+    </div>
+</div>
+<div class="column-container black">
+    <h1>CB&U 1.12.3</h1>
+    <h2>키보드를 두드릴 시간.</h2>
+    <p>가격은 ￦1,350,000부터</p>
+    <p>* 키보드는 상품이 아닙니다.</p>
+    <div class="atag-container black">
+        <a href="/">더 알아보기</a>
+        <a href="/">구입하기</a>
+    </div>
+    <img src="https://pngimg.com/uploads/keyboard/keyboard_PNG5861.png" alt="">
+</div>
 {% endblock %}

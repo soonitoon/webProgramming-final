@@ -1,12 +1,12 @@
 const {Router} = require('express');
+const {requireAuthentication} = require('../middlewares/auth')
 
 const router = Router();
 
 router.get('/', (req, res, next) => {
-    res.cookie('myCookie', 'from Index');
     res.render('index', {
         title: 'Simple Board',
-        cookie: JSON.stringify(req.cookies)
+        errorMessage: req.flash('errorMessage')
     });
 });
 
@@ -20,6 +20,13 @@ router.get('/join', (req, res, next) => {
 router.get('/login', (req, res, next) => {
     res.render('login', {
         title: 'Simple Board - 로그인',
+        errorMessage: req.flash('errorMessage')
+    });
+});
+
+router.get('/write', requireAuthentication, (req, res, next) => {
+    res.render('write', {
+        title: 'Simple Board - 글쓰기',
         errorMessage: req.flash('errorMessage')
     });
 });

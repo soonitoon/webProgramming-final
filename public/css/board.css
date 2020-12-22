@@ -1,0 +1,38 @@
+.header h1 {
+    margin: 70px 0 15px 100px;
+}
+.header img {
+    width: 100%;
+    height: 800px;
+}
+.header {
+    display: absolute;
+}
+.inner-h1 {
+    position: relative;
+    color: white;
+    top: -600px;
+    left: 180px;
+    font-size: 60px;
+}
+.inner-h1-2 {
+    position: relative;
+    color: white;
+    top: -600px;
+    left: 400px;
+    font-size: 30px;
+}
+.dev-div {
+    width: 400px;
+    margin: 30px  auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.dev {
+    width: 200px;
+    height: 200px;
+}
+.dev-div h1 {
+    margin: 20px;
+}

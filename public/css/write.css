@@ -1,0 +1,82 @@
+.dummy {
+    width: 100%;
+    margin: 60px auto;
+}
+.grid-container {
+    display: grid;
+    grid-template: "area1 area2 area3";
+}
+.grid-container img {
+    margin-top: 100px;
+    grid-area: area3;
+}
+.form-container {
+    grid-area: area1;
+    width: 500px;
+    margin: 10px 0 80px 100px;
+    padding: 10px 20px;
+    text-align: left;
+}
+.send {
+    font-size: 50px;
+    width: 230px;
+    grid-area: area2;
+    margin-top: 277px;
+}
+.title {
+    font-size: 38px;
+    margin: 10px;
+}
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 400px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+input:focus {
+    outline: none;
+}
+button {
+    background-color: rgba(15, 83, 255, 1);
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    height: 60px;
+    width: 424px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 17px;
+}
+button:focus {
+    outline: none;
+}
+button:hover {
+    background-color: rgba(15, 131, 255, 1);
+}
+textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 400px;
+    height: 500px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+textarea:focus {
+    outline: none;
+}
+.form-container p {
+    margin: 10px 0;
+    color: rgba(89, 89, 89, 1);
+    font-weight: 600;
+    font-size: 14px;
+}
+.error {
+    color: red;
+}

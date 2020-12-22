@@ -4,34 +4,138 @@
     <meta charset="UTF-8">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
     {% block styles %}
     {% endblock %}
 </head>
 <body>
     <header>
-        <h2 class="title">
-            <a href="/">Simple Board</a>
-        </h2>
-        <ul>
+        <ul class="menu-bar">
             {% if isAuthenticated %}
-            <li class="item">{{user.username}}님 환영합니다.</li>
+            <li><img src="http://www.bluemed-initiative.eu/wp-content/uploads/2016/12/Logo-5.png" alt=""></li>
+            <li><a href="/">CB&U</a></li>
+            <li class="item"><a>{{user.username}}</a></li>
             <li class="item"><a href="/logout">Logout</a></li>
+            <li class="item"><a href="/write">글쓰기</a></li>
+            <li class="item"><a href="/board">게시판</a></li>
             {% else %}
+            <li><img src="http://www.bluemed-initiative.eu/wp-content/uploads/2016/12/Logo-5.png" alt=""></li>
+            <li><a href="/">CB&U</a></li>
             <li class="item"><a href="/login">Login</a></li>
             <li class="item"><a href="/join">Sign-up</a></li>
+            <li class="item"><a href="/board">게시판</a></li>
             {% endif %}
         </ul>
     </header>
-
     <main>
         {% block content %}
         {% endblock %}
     </main>
-
     <footer>
-        <p>Copyright&copy; 2020.kmahn.All rights reserved.</p>
+        <div class="footer-container">
+            <p>* CB&U 프로그램은 웹 프로그래밍 기말 과제이자 사람 혼자 만들었습니다. CB&U 및 CB&U의 계열사는 있는지 
+                잘 모르겠습니다. CB&U의 서비스 금액은 마음대로 정했습니다. 사실 애플 홈페이지 가격 따라했습니다.
+                일부 컴퓨터에서는 본 프로그램을 이용할 수 없으며, 일부 운영체제는 지원 대상이 아닙니다. CB&U는 어떤
+                운영체제이든 설치를 거부하거나 서비스를 종료할 권리를 갖습니다. 새 CB&U 프로그램 구매 시, 현재 
+                설치된 프로그램의 버그 개수만큼 할인을 받을수도 있습니다. 추가 약관은 naver.com/에 문의하십시오.
+            </p>
+            <hr>
+            <div class="footer-row-container">
+                <div class="footer-column-container start">
+                    <p class="bold">쇼핑 및 알아보기</p>
+                    <p>게시판 통합 서비스</p>
+                    <p>유료 계정</p>
+                    <p>데이터 용량 추가구매</p>
+                    <p>팀 프로젝트</p>
+                    <p>글자 색 사용권</p>
+                    <p>글자 크기 사용권</p>
+                    <p>이모티콘 사용권</p>
+                </div>
+                <div class="footer-column-container">
+                    <p class="bold">서비스</p>
+                    <p>CB 과제 템플릿</p>
+                    <p>CB 레포트 템플릿</p>
+                    <p>CBcloud</p>
+                    <p>CB Bucks</p>
+                    <p>CB Store</p>
+                    <p class="bold second">계정</p>
+                    <p>CB&U ID 관리</p>
+                    <p>CB&U Store 계정</p>
+                    <p>CBcloud.com</p>
+                </div>
+                <div class="footer-column-container">
+                    <p class="bold">CB&U Store</p>
+                    <p>매장 찾기</p>
+                    <p>온라인에서 쇼핑하기</p>
+                    <p>Wine Bar</p>
+                    <p>Today at CB&U</p>
+                    <p>CB&U 캠프</p>
+                    <p>CB&U Store 앱</p>
+                    <p>구버전 및 특가제품</p>
+                    <p>금융 혜택</p>
+                    <p>CB&U Trade in</p>
+                    <p>주문 상태</p>
+                    <p>쇼핑 도움말</p>
+                </div>
+                <div class="footer-column-container">
+                    <p class="bold">비즈니스</p>
+                    <p>CB&U와 비즈니스</p>
+                    <p>비즈니스를 위한 제품 쇼핑하기</p>
+                    <p class="bold second">교육</p>
+                    <p>CB&U와 교육</p>
+                    <p>대학생용 제품 쇼핑하기</p>
+                    <p>대학원 생활을 위한 제품 쇼핑하기</p>
+                </div>
+                <div class="footer-column-container end">
+                    <p class="bold">CB&U의 가치관</p>
+                    <p>어려운 사용</p>
+                    <p>환경 파괴</p>
+                    <p>개인정보 유출</p>
+                    <p>협력업체 방임</p>
+                    <p class="bold second">CB&U 정보</p>
+                    <p>Newsroom</p>
+                    <p>CB&U 리더십</p>
+                    <p>채용 화이팅</p>
+                    <p>이벤트</p>
+                    <p>일자리 감소</p>
+                    <p>CB&U 연락처</p>
+                </div>
+            </div>
+            <p class="shopping-p">다양한 쇼핑 방법: <a href="/">CB&U Store</a>를 방문하거나, <a href="https://www.daangn.com/">당근마켓</a>을 찾아보거나, 080-123-456번으로 전화하세요.</p>
+            <hr>
+            <div class="footer-row-container">
+                <p>Copyright © 2020 CB&U Inc. 모든 권리 보유.</p>
+                <div class="vertical-large"></div>
+                <p class="bold">개인정보 처리방침</p>
+                <div class="vertical"></div>
+                <p class="bold">웹 사이트 이용 약관</p>
+                <div class="vertical"></div>
+                <p class="bold">판매 및 환불</p>
+                <div class="vertical"></div>
+                <p class="bold">법적 고지</p>
+                <div class="vertical"></div>
+                <p class="bold">법적 고지</p>
+                <div class="vertical"></div>
+                <p class="bold">사이트 맵</p>
+                <div class="vertical-largest"></div>
+                <p>대한민국</p>
+            </div>
+            <div class="footer-row-container bottom">
+                <p>사업자등록번호: 123-45-6789</p>
+                <div class="vertical"></div>
+                <p>통신판매업신고번호: 제 1234-충북청주-02358호</p>
+                <div class="vertical"></div>
+                <p>대표이사: CHOI HYUNO</p>
+                <div class="vertical"></div>
+                <p>주소: 충북 청주시 서원구 충대로1</p>
+                <div class="vertical"></div>
+                <p>대표전화: 12-3456-789</p>
+                <div class="vertical"></div>
+                <p>한 학기 감사합니다!</p>
+            </div>
+        </div>
     </footer>
-
     {% block script %}
     {% endblock %}
 </body>
